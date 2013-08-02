@@ -18,6 +18,9 @@
  *  
  */
 
+#ifndef __OS400__
+#error "This code only compiles on OS/400 (or IBM i nowadays)"
+#endif
 
 #pragma comment(copyright,"Erik Olsson, 2010")
 
@@ -98,7 +101,7 @@ typedef _Packed struct
     short  Field_Len;
     short  Num_Of_Digs;
     short  Dec_Pos;
-    short  dsplen; /* needs to handel line wrap really */
+    short  dsplen; /* needs to handle line wrap really */
     /* all we care about for now */
 } keystruct;
 
