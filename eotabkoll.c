@@ -1,7 +1,7 @@
 /*
  * WRKDBF, DBU, Filescope etc like utility for OS/400. 
  * Unfinished as I do not have access to such a box anymore.
- * In dire need of refactoring, I was not a clean coder back then. 
+ * In dire need of refactoring. 
  *
  * Copyright (c) 2010 erik olsson
  *
