@@ -1,0 +1,8 @@
+             CMD        PROMPT('Run Tablekoll')
+
+             parm       DBFILE TYPE(FILENAME) PROMPT('Table Name')
+             PARM       KWD(DBMBR) TYPE(*NAME) LEN(10) DFT(*FIRST) +
+                          SPCVAL((*FIRST)) PROMPT('Member Name')
+filename:    qual       type(*NAME) len(10) min(1)
+             qual       type(*NAME) dft(*LIBL) spcval((*LIBL) (*CURLIB)) +
+                        prompt('Schema name')
