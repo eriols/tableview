@@ -14,7 +14,7 @@
 
 /*   Easiest invoked via cmd EOTABKOLL. File must be passed, lib or member is optional.
  *   Compile with, for instance
- *   ixlc /path/to//eotabkoll.c -oMYLIB/EOTABKOLL -qdbgview=source -qprint 
+ *   ixlc /path/to/eotabkoll.c -oMYLIB/EOTABKOLL -qdbgview=source -qprint 
  *  
  */
 
