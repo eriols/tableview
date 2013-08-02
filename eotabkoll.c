@@ -22,8 +22,6 @@
 #error "This code only compiles on OS/400 (or IBM i nowadays)"
 #endif
 
-#pragma comment(copyright,"Erik Olsson, 2010")
-
 #include <stdlib.h>
 #include <stdio.h>
 #include <string.h>
@@ -3044,7 +3042,7 @@ void loadMemberList(Qsn_Win_T mbrwin,
             QsnWrtPad(' ', sizeof(s), 0, row + i, strcol, cmdbuf, mbrwin, NULL);
         }
     }
-    /* skriv om det finns fler rader etc helst sen */
+    /* should ideally display whether more rows exists */
     return;
 }
 
