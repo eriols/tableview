@@ -9,16 +9,16 @@ of limitations of course.
 
 Some of the things you can do:<br>
 View generated DDL for a db object (aliases does not work, api limitation)<br>
-Look at a row detail of a column<br>
-Position yourself using keys on keyed files<br>
-List column info of a file<br> 
+Look at a row detail<br>
+Position yourself using keys on keyed files, including GE, GT, LE etc positioning<br>
+List column info of a file (if the generated DDL is not your cup of tea)<br> 
 List and go to a particular member of a file. (The performance of the QUSLMBR api truly 
-suck)<br>
+suck, but there seems to be no alternative)<br>
 Do regex searches (api limitations, again, XPG4 I think) against member names and descriptions<br>
 View Decimal Floating Point datatypes (which as yet none of the above tools do)<br>
 View journalling info<br>
-Display database relations including stuff like the keys of a related db object<br>
-Silly small things such as scrolling left and right, show RRN, turn Fkey display on/off<br>
+Display database relations, including stuff like the keys of a related db object<br>
+Silly small things such as scrolling left and right, show RRN, turn Fkey display on/off, toggle column names/descriptions<br>
 
 
 Some of the things that you can't yet do:<br>
