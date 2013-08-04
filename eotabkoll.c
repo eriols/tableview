@@ -491,7 +491,7 @@ int main (int argc, char *argv[])
                 }
                 else if (field_list->Digits >= 9 && field_list->Decimal_Positions > 0)
                 {
-                    fptr[fieldno].dspsize = field_list->Digits + 2;  /* space for decpointen and sign */
+                    fptr[fieldno].dspsize = field_list->Digits + 2;  /* space for decpoint and sign */
                 }
                 else
                 {
@@ -542,14 +542,14 @@ int main (int argc, char *argv[])
 
         /* string containing datatype and length formatted */
         memset(fptr[fieldno].dataTypeString, ' ', sizeof((fielddata_t *)0)->dataTypeString);
-        if (field_list->Digits == 0) /* alfa typ */
+        if (field_list->Digits == 0) /* alpha numerical */
         {
             snprintf(fptr[fieldno].dataTypeString, sizeof((fielddata_t *)0)->dataTypeString, 
             	"%c%c %5d       ", fptr[fieldno].Data_Type, 
             	fptr[fieldno].Var_Fld_Ind == '1' ? 'V' : ' ',
 				field_list->Field_Length_Bytes);
         }
-        else // ha float o decfloat f�r sig en�r inga dec positions?
+        else 
         {
             snprintf(fptr[fieldno].dataTypeString, sizeof((fielddata_t *)0)->dataTypeString, 
             	"%c%c    %2d,%2d    ", fptr[fieldno].Data_Type,
@@ -839,7 +839,7 @@ int main (int argc, char *argv[])
             writeColumnNames(colnames, colheadings, dspcolnames, strlistcol, wpos, datalen);
             shiftView(listw, strlistcol, dspreclen, rrn);
         }
-        /* Alternate between column names och headings */
+        /* Alternate between column names and headings */
         else if (pinput->AID == QSN_F8)
         {
             int datalen;
@@ -1564,21 +1564,21 @@ void drawJrnWindow(const Qsn_Win_T *win, const Qsn_Cmd_Buf_T *cbuf)
 
     if (jrndata->Qdbfjact == '1')
     {
-        snprintf(wdwtext1, sizeof(wdwtext1) - 1, "%s", "Journal name:");
+        snprintf(wdwtext1, sizeof(wdwtext1), "%s", "Journal name:");
         QsnWrtDta(wdwtext1, strlen(wdwtext1), 0, 1, 1, QSN_SA_HI, QSN_SA_HI,
                   red, norm, *cbuf, *win, NULL);
 
         QsnWrtDta(jrndata->Qdbfojrn, 10, 0, 1, 15, QSN_SA_HI, QSN_SA_HI,
                   white, norm, *cbuf, *win, NULL);
 
-        snprintf(wdwtext1, sizeof(wdwtext1) - 1, "%s", "Journal lib:");
+        snprintf(wdwtext1, sizeof(wdwtext1), "%s", "Journal lib:");
         QsnWrtDta(wdwtext1, strlen(wdwtext1), 0, 2, 1, QSN_SA_HI, QSN_SA_HI,
                   red, norm, *cbuf, *win, NULL);
 
         QsnWrtDta(jrndata->Qdbfolib, 10, 0, 2, 15, QSN_SA_HI, QSN_SA_HI,
                   white, norm, *cbuf, *win, NULL);
 
-        snprintf(wdwtext1, sizeof(wdwtext1) - 1, "%s", "Last journaled date:");
+        snprintf(wdwtext1, sizeof(wdwtext1), "%s", "Last journaled date:");
         QsnWrtDta(wdwtext1, strlen(wdwtext1), 0, 4, 1, QSN_SA_HI, QSN_SA_HI,
                   red, norm, *cbuf, *win, NULL);
 
