@@ -1,4 +1,4 @@
-eotabkoll (for OS/400) erik olsson
+eotabkoll (for OS/400)
 ---------------------------------------------------
 
 Beginnings of a tool for viewing table data, similar to Filescope, DBU, WRKDBF etc.<br>
