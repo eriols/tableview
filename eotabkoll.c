@@ -3407,7 +3407,7 @@ void loadDBRList(Qsn_Win_T  dbrwin,
         memset(s, ' ', sizeof(s) - 1);
         /* Note. if len in snprintf was strlen(s) there was always some junk in the first
            row, therefore the hassle  */
-        snprintf(s, fnamesize + flibsize + 1, "%.*s %.*s %.*s %.*s",
+        snprintf(s, fnamesize + flibsize, "%.*s %.*s %.*s %.*s",
                  fnamesize,
                  dbrdata[*idx].dbrinfo.Dependent_File_Name,
                  flibsize,
@@ -3435,19 +3435,19 @@ void loadDBRList(Qsn_Win_T  dbrwin,
             {
                 if (memcmp(dbrdata[*idx].dbrinfo.Dependency_Type, "D", 1) == 0)
                 {
-                    strncpy(dep, "Data", sizeof(dep));
+                    strcpy(dep, "Data");
                 }
                 else if (memcmp(dbrdata[*idx].dbrinfo.Dependency_Type, "C", 1) == 0)
                 {
-                    strncpy(dep, "Constraint", sizeof(dep));
+                    strcpy(dep, "Constraint");
                 }
                 else if (memcmp(dbrdata[*idx].dbrinfo.Dependency_Type, "V", 1) == 0)
                 {
-                    strncpy(dep, "View dep", sizeof(dep));
+                    strcpy(dep, "View dep");
                 }
                 else /* O, I, blank, vad kalla dem annars? */
                 {
-                    strncpy(dep, dbrdata[*idx].dbrinfo.Dependency_Type, 1);
+                    strcpy(dep, dbrdata[*idx].dbrinfo.Dependency_Type);
                 }
             }
             /* row 2 */
