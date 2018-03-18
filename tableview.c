@@ -359,7 +359,6 @@ int main (int argc, char *argv[]) {
         exit(EXIT_FAILURE);
     }
 
-
     /* if keyed access path, call qdbrtvd again with FILD0300 to get key info */
     if (fddata->Qdbfhflg.Qdbfhfky == 1) {
         short i;
@@ -972,7 +971,7 @@ void loadHdr(Qdb_Qdbfh_t    *fddata,
     int row, column, i;
     _MMTR_Template_T machine_attributes;
 
-    snprintf(headtext, LISTWIDTH, "%s", " Table-koll ");
+    snprintf(headtext, LISTWIDTH, "%s", " Tableview ");
     row = 1;
     column = 57;
     mcattr = QSN_SA_HI;
@@ -3098,8 +3097,7 @@ void loadDBRList(Qsn_Win_T  dbrwin,
             /* row 2 */
             i++;
             memset(s, ' ', sizeof(s) - 1);
-            snprintf(s, sizeof(s), "%.10s %.50s", dep,
-            	dbrdata[*idx].dbrinfo.Constraint_Name);
+            snprintf(s, sizeof(s), "%.10s %.50s", dep, dbrdata[*idx].dbrinfo.Constraint_Name);
             if (*s != '\0') {
                 QsnWrtDta(s, sizeof(s) - 1, 0, row + i, strcol + 2, norm, norm, white,
                 	white, cmdbuf, dbrwin, NULL);
