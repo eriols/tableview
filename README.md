@@ -1,4 +1,4 @@
-# tablewview (for OS/400)
+# tableview (for OS/400)
 
 Beginnings of a tool for viewing table data, similar to Filescope, DBU, WRKDBF etc.
 Runs under 5250 terminal emulators. I seem to recall (I have not had access to a IBM i box since 2011) that it worked best under Client Access.
