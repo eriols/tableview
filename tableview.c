@@ -14,7 +14,7 @@
 
 /*  Most easily invoked via cmd EOTABKOLL. File must be passed, lib or member is optional.
  *  Compile with, for instance
- *  ixlc /path/to/tableeview.c -oMYLIB/tableview -qdbgview=source -qprint
+ *  ixlc /path/to/tableview.c -oMYLIB/tableview -qdbgview=source -qprint
  *
  */
 
